@@ -1,2 +1,45 @@
-<p1> Hello </p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wordle Best Player Question</title>
+</head>
+<body>
+
+<h2>Who is best at Wordle?</h2>
+
+<p>Select one:</p>
+
+<select id="answer">
+  <option value="">-- choose an answer --</option>
+  <option value="Richard">1 — Richard</option>
+  <option value="Paul">2 — Paul</option>
+  <option value="Wally">3 — Wally</option>
+  <option value="Sue">4 — Sue</option>
+  <option value="Phil1">5 — Phil</option>
+  <option value="Eunsu">6 — Eunsu</option>
+  <option value="Phil2">7 — Phil</option>
+</select>
+
+<br><br>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkAnswer() {
+  const answer = document.getElementById("answer").value;
+  const result = document.getElementById("result");
+
+  if (answer === "Richard") {
+    result.textContent = "Correct!";
+  } else {
+    result.textContent = "No, try again — clue: the answer begins with R.";
+  }
+}
+</script>
+
+</body>
+</html>
+
 
